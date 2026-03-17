@@ -529,8 +529,8 @@ If conditions made work impossible — they get paid. Simple.
 | M Pravallika |
 
 **University:** SRM University AP
-**GitHub Repository:** *(link to be added)*
-**Phase 1 Demo Video:** *(link to be added)*
+**GitHub Repository:** *(https://github.com/uvhemanth6/GigSure_Guidewire/)*
+**Phase 1 Demo Video:** *(https://drive.google.com/file/d/1hcmnCD2SZFaCKOSlPEKu321WfvcF1b8d/view?usp=sharing)*
 
 ---
 
