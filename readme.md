@@ -1,4 +1,4 @@
-# 🛡️ GigShield
+# 🛡️ GigSure
 ### *Because Rain Shouldn't Mean Zero Rupees*
 
 > **Guidewire DEVTrails 2026 | University Hackathon**
@@ -11,7 +11,7 @@
 1. [The Problem](#-the-problem)
 2. [The Reality in Numbers](#-the-reality-in-numbers)
 3. [The Big Idea](#-the-big-idea)
-4. [Why GigShield is Different](#-why-gigshield-is-different)
+4. [Why GigSure is Different](#-why-gigsure-is-different)
 5. [Who This is For](#-who-this-is-for)
 6. [How It Works](#-how-it-works)
 7. [Disruption Triggers](#-disruption-triggers)
@@ -49,7 +49,7 @@ No earnings.
 No safety net.
 ```
 
-👉 **There is zero income protection for this. GigShield changes that.**
+👉 **There is zero income protection for this. gigsure changes that.**
 
 ---
 
@@ -62,13 +62,13 @@ No safety net.
 | Working days lost during monsoon alone | 4 – 6 days/month |
 | Existing income protection solutions | **0** |
 
-> That last number — zero — is the entire reason GigShield exists.
+> That last number — zero — is the entire reason gigsure exists.
 
 ---
 
 ## 💡 The Big Idea
 
-GigShield is a **parametric income insurance platform** built specifically for gig workers.
+gigsure is a **parametric income insurance platform** built specifically for gig workers.
 
 Here is the simplest way to understand what we do:
 
@@ -88,9 +88,9 @@ The worker doesn't need to do a single thing. If it rains heavily in their zone 
 
 ---
 
-## ⚙️ Why GigShield is Different
+## ⚙️ Why gigsure is Different
 
-| Feature | Traditional Insurance | 🛡️ GigShield |
+| Feature | Traditional Insurance | 🛡️ GigSure |
 |---|---|---|
 | Claim Process | Manual — forms and documents | Fully Automatic |
 | Time to Payout | 15 to 45 days | Under 60 minutes |
@@ -114,7 +114,7 @@ The worker doesn't need to do a single thing. If it rains heavily in their zone 
 | Biggest Risk | Fully dependent on showing up every day |
 
 > 👉 Even **one bad weather day** creates real financial stress for this person.
-> GigShield absorbs that shock before it becomes a crisis.
+> GigSure absorbs that shock before it becomes a crisis.
 
 ---
 
@@ -124,7 +124,7 @@ Here is the full journey — from signing up to receiving money — explained si
 
 ### 1️⃣ Onboarding — Takes 5 Minutes
 ```
-Open GigShield on phone (no app download needed — it's a PWA)
+Open GigSure on phone (no app download needed — it's a PWA)
 → Sign up with mobile number
 → Verify with OTP
 → Enter your zone, platform (Zomato/Swiggy), average daily earnings
@@ -329,7 +329,7 @@ Final Weekly Premium: ₹50
 
 ## 🤖 AI and ML Integration
 
-AI is not a feature we added on top — it is the foundation of how GigShield works.
+AI is not a feature we added on top — it is the foundation of how GigSure works.
 
 | What | Algorithm | Purpose |
 |---|---|---|
@@ -412,7 +412,7 @@ AI is not a feature we added on top — it is the foundation of how GigShield wo
 What the delivery partner sees in their app:
 
 ```
-🛡️ Your GigShield Coverage
+🛡️ Your GigSure Coverage
 ─────────────────────────────────────
 Status          : ACTIVE ✅
 This Week       : March 10 – 16
@@ -511,7 +511,7 @@ What the insurer sees in their dashboard:
 
 > **We don't verify claims — we verify conditions.**
 
-This is what makes GigShield fundamentally different.
+This is what makes GigSure fundamentally different.
 We never ask the worker to prove they didn't work.
 We verify the world they were working in.
 If conditions made work impossible — they get paid. Simple.
@@ -538,10 +538,10 @@ If conditions made work impossible — they get paid. Simple.
 
 > *A delivery partner's income shouldn't disappear just because the weather changes.*
 
-GigShield doesn't just sell insurance.
+GigSure doesn't just sell insurance.
 It gives a delivery partner the confidence to say —
 **"Even if it rains tomorrow, my family will be okay."**
 
 ---
 
-*Built with ❤️ by Team GigShield | SRM University AP | Guidewire DEVTrails 2026*
+*Built with ❤️ by Team GigSure | SRM University AP | Guidewire DEVTrails 2026*
