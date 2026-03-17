@@ -1,649 +1,547 @@
-# 🛡️ GigShield — Because Rain Shouldn't Mean Zero Rupees
+# 🛡️ GigShield
+### *Because Rain Shouldn't Mean Zero Rupees*
 
 > **Guidewire DEVTrails 2026 | University Hackathon**
-> India's first AI-powered parametric income insurance built exclusively for food delivery partners.
+> AI-Powered Parametric Income Insurance for India's Gig Economy
 
 ---
 
 ## 📌 Table of Contents
 
-1. [The Real Problem — In Plain Numbers](#the-real-problem--in-plain-numbers)
-2. [A Week in Ravi's Life](#a-week-in-ravis-life)
-3. [Why Existing Solutions Fail Him](#why-existing-solutions-fail-him)
-4. [Traditional Insurance vs GigShield — What's the Difference?](#traditional-insurance-vs-gigshield--whats-the-difference)
-5. [The Big Idea](#the-big-idea)
-6. [Who We're Building For](#who-were-building-for)
-7. [How It Actually Works — Step by Step](#how-it-actually-works--step-by-step)
-8. [Weekly Premium Model — Keeping It Simple](#weekly-premium-model--keeping-it-simple)
-9. [What Triggers a Payout — Our 5 Disruption Triggers](#what-triggers-a-payout--our-5-disruption-triggers)
-10. [How AI Powers Every Decision](#how-ai-powers-every-decision)
-11. [How We Catch Fraud — 3 Layer Protection](#how-we-catch-fraud--3-layer-protection)
-12. [How We Built the Magic — Tech Stack](#how-we-built-the-magic--tech-stack)
-13. [Why a Web App and Not a Native App](#why-a-web-app-and-not-a-native-app)
-14. [System Architecture — How Everything Connects](#system-architecture--how-everything-connects)
-15. [6-Week Build Plan](#6-week-build-plan)
-16. [The Dashboard — What Workers and Insurers See](#the-dashboard--what-workers-and-insurers-see)
-17. [API Integrations](#api-integrations)
-18. [Can This Be a Real Business?](#can-this-be-a-real-business)
-19. [Glossary — No Jargon Left Behind](#glossary--no-jargon-left-behind)
-20. [Team](#team)
+1. [The Problem](#-the-problem)
+2. [The Reality in Numbers](#-the-reality-in-numbers)
+3. [The Big Idea](#-the-big-idea)
+4. [Why GigShield is Different](#-why-gigshield-is-different)
+5. [Who This is For](#-who-this-is-for)
+6. [How It Works](#-how-it-works)
+7. [Disruption Triggers](#-disruption-triggers)
+8. [Fraud Detection](#-fraud-detection--multi-layer-system)
+9. [Risk Scoring Engine](#-risk-scoring-engine)
+10. [Weekly Premium Model](#-weekly-premium-model)
+11. [AI and ML Integration](#-ai-and-ml-integration)
+12. [Tech Stack](#️-tech-stack)
+13. [System Architecture](#️-system-architecture)
+14. [Dashboard](#-dashboard)
+15. [Why This Works](#-why-this-works)
+16. [Business Viability](#-business-viability)
+17. [Deliverables Roadmap](#-deliverables-roadmap)
+18. [Key Insight](#-key-insight)
+19. [Team](#-team)
 
 ---
 
-## 📊 The Real Problem — In Plain Numbers
+## 📌 The Problem
 
-We're not guessing at the problem. These numbers tell the story:
+Every morning, millions of delivery partners across India get on their bikes hoping for a good day.
 
-| Fact | Number |
+But the moment it starts raining heavily — orders stop.
+A local strike is called — roads are blocked.
+The heat becomes unbearable — no one orders food.
+
+Their income simply **disappears**.
+
+This is not a rare situation. It happens every monsoon, every heatwave, every bandh. And today there is absolutely **zero protection** for these workers.
+
+```
+No orders.
+No work.
+No earnings.
+No safety net.
+```
+
+👉 **There is zero income protection for this. GigShield changes that.**
+
+---
+
+## 📊 The Reality in Numbers
+
+| What | How Much |
 |---|---|
-| Active food delivery workers in India | ~5 million |
-| Workers with ANY form of income insurance | ~0 |
-| Average income lost per worker per month due to weather/disruptions | ₹1,200 – ₹2,000 |
-| Days per month a Hyderabad delivery partner can't work due to rain (monsoon months) | 4 – 6 days |
-| Time it takes traditional insurance to pay a claim | 15 – 45 days |
-| Time GigShield takes to pay after a disruption is detected | Under 60 minutes |
-| Workers who said they'd pay ₹50/week for income protection (informal survey data) | 7 in 10 |
+| Food delivery workers in India | ~5 million |
+| Monthly income lost to disruptions | ₹1,200 – ₹2,000 |
+| Working days lost during monsoon alone | 4 – 6 days/month |
+| Existing income protection solutions | **0** |
 
-> **The bottom line:** 5 million workers. Zero protection. We're fixing that.
-
----
-
-## 📅 A Week in Ravi's Life
-
-Meet **Ravi Kumar**, 28, Swiggy delivery partner, Hyderabad. He earns ₹700 on a good day.
-
-```
-Monday    ☀️  8 hrs work → ₹780 earned       → Good day
-Tuesday   🌧️  Heavy rain → 0 deliveries       → ₹0 earned. Bills don't pause.
-Wednesday ☀️  7 hrs work → ₹710 earned       → Recovering
-Thursday  🌫️  AQI 320 (Hazardous) → sent home → ₹0 earned. Again.
-Friday    ☀️  8 hrs work → ₹790 earned       → Back on track
-Saturday  ☀️  9 hrs work → ₹880 earned       → Best day
-Sunday    🌧️  Rain again → 3 hrs only        → ₹260 earned
-
-Weekly Total Without GigShield:  ₹3,420  (lost ₹1,400 to disruptions)
-Weekly Total With GigShield:     ₹3,420 + ₹900 payout = ₹4,320  ✅
-
-```
-
-**That ₹900 difference** is whether Ravi pays his rent on time or not. That's what GigShield does.
-
----
-
-## ❌ Why Existing Solutions Fail Him
-
-You might ask — doesn't the government or Zomato/Swiggy already help?
-
-| Solution | What It Covers | Why It Fails Ravi |
-|---|---|---|
-| **PMSBY (Govt Scheme)** | Accidental death only | Doesn't cover income loss from rain or curfew |
-| **Swiggy/Zomato Welfare Fund** | Medical emergencies, death | No income replacement for weather disruptions |
-| **Traditional Health Insurance** | Medical bills | Nothing to do with lost delivery income |
-| **Personal Savings** | Whatever he has | Average delivery worker has < ₹2,000 in savings |
-| **Moneylenders / Family Loans** | Short-term cash | High interest, creates debt spiral |
-
-**The gap is clear.** Nobody is protecting the income Ravi loses when it rains. GigShield is built exactly for this gap — nothing more, nothing less.
-
----
-
-## ⚖️ Traditional Insurance vs GigShield — What's the Difference?
-
-Most people think insurance means: *something bad happens → you file a claim → you wait → maybe you get money.*
-
-**GigShield works completely differently.** Here's the comparison:
-
-| | Traditional Insurance | GigShield (Parametric) |
-|---|---|---|
-| **How claims work** | You file a claim manually, submit documents, wait for approval | Automatic — the weather data itself triggers the payout |
-| **Time to get paid** | 15 to 45 days | Under 60 minutes |
-| **Who decides your claim** | A human claims adjuster | Real-time data from verified APIs |
-| **Can claims be disputed?** | Yes — very often | Rarely — the data is objective |
-| **Paperwork needed** | Lots | Zero |
-| **Fraud risk** | High (fake receipts, exaggerated claims) | Low (data-driven, not human-reported) |
-| **Pricing** | Monthly, complex | Weekly, transparent |
-
-> **In simple words:** In parametric insurance, we don't ask "did you lose money?" — we check "did it rain heavily in your zone today?" If yes, you get paid. No questions. No forms. No waiting.
+> That last number — zero — is the entire reason GigShield exists.
 
 ---
 
 ## 💡 The Big Idea
 
-**GigShield** is a parametric income insurance platform for food delivery partners on Zomato and Swiggy.
+GigShield is a **parametric income insurance platform** built specifically for gig workers.
 
-Here's the one-sentence version of how it works:
+Here is the simplest way to understand what we do:
 
-> *"If the weather data says it rained heavily in your zone, you automatically receive money in your UPI account within the hour — no claim needed, no forms, no waiting."*
+> **Disruption happens → system detects it → payout sent automatically.**
 
-Three things make GigShield special:
+```
+No forms.
+No waiting.
+No arguments.
+```
 
-**1. It's automatic.**
-Workers don't need to do anything when a disruption hits. Our system watches the weather, the AQI, and local alerts 24/7. When a threshold is crossed, the payout process starts on its own.
+The worker doesn't need to do a single thing. If it rains heavily in their zone today, money reaches their UPI account within 60 minutes. That is the entire experience from their side.
 
-**2. It fits how gig workers actually live.**
-They earn weekly. They spend weekly. So we price weekly — starting at just ₹25 per week. No monthly commitments, no annual premiums.
-
-**3. It's smart about fraud.**
-Because payouts are triggered by verified third-party data (not worker reports), it's very hard to fake a claim. Our AI adds another layer on top to catch the rare edge cases.
+> 💬 **What is Parametric Insurance?**
+> Normal insurance makes you file a claim and wait weeks for approval.
+> Parametric insurance pays automatically the moment a verified event occurs — like rainfall crossing a set threshold. The event itself is the proof. No paperwork. No human judgment needed.
 
 ---
 
-## 👤 Who We're Building For
+## ⚙️ Why GigShield is Different
 
-### Persona: Food Delivery Partner (Zomato / Swiggy)
+| Feature | Traditional Insurance | 🛡️ GigShield |
+|---|---|---|
+| Claim Process | Manual — forms and documents | Fully Automatic |
+| Time to Payout | 15 to 45 days | Under 60 minutes |
+| Proof Required | Heavy documentation | None — system driven |
+| Fraud Risk | High | Low — data based |
+| Pricing | Monthly | Weekly — fits gig earnings |
 
-| Attribute | Details |
+---
+
+## 👤 Who This is For
+
+**Persona: Food Delivery Partner (Swiggy / Zomato)**
+
+| Attribute | Detail |
 |---|---|
-| **Representative Name** | Ravi Kumar |
-| **Age** | 28 |
-| **City** | Hyderabad, Telangana |
-| **Platform** | Swiggy (primary), Zomato (secondary) |
-| **Daily Earnings (good day)** | ₹600 – ₹900 |
-| **Weekly Earnings** | ₹3,500 – ₹5,500 |
-| **Phone** | Android, budget device (₹6,000–₹10,000 range) |
-| **Language** | Telugu / Hindi |
-| **Disruption Days per Month** | 3–6 days (higher during monsoon: June–September) |
-| **Monthly Income Lost to Disruptions** | ₹1,200 – ₹2,000 |
-| **Savings Buffer** | Less than ₹2,000 typically |
+| Platform | Swiggy / Zomato |
+| Daily Earnings | ₹600 – ₹900 |
+| Weekly Earnings | ₹3,500 – ₹5,500 |
+| Device | Low-end Android smartphone |
+| City | Hyderabad (launch city) |
+| Biggest Risk | Fully dependent on showing up every day |
 
-### Why Food Delivery Specifically?
-
-Food delivery is the most disruption-sensitive segment:
-- Unlike e-commerce (Amazon/Flipkart), food is **time-critical** — a delayed food order in rain just doesn't happen
-- Unlike grocery delivery, food orders **drop to near-zero during heavy rain** (restaurants close, customers don't order)
-- The income impact is **sharp, fast, and measurable** — perfect for parametric insurance
-- Hyderabad gets **600–700mm of rainfall** during monsoon months, making this a real and recurring problem
+> 👉 Even **one bad weather day** creates real financial stress for this person.
+> GigShield absorbs that shock before it becomes a crisis.
 
 ---
 
-## 🔄 How It Actually Works — Step by Step
+## 🔄 How It Works
 
-### Step 1: Sign Up (Takes 5 Minutes)
+Here is the full journey — from signing up to receiving money — explained simply:
 
+### 1️⃣ Onboarding — Takes 5 Minutes
 ```
-Worker opens GigShield on their phone browser (no app download needed)
-↓
-Enters mobile number → OTP verification
-↓
-Fills in: Name, City, Delivery Zone, Platform (Zomato/Swiggy), Average daily earnings
-↓
-Uploads: Platform ID screenshot (for verification)
-↓
-Our AI Risk Engine runs silently in the background
-↓
-Worker sees their personalised weekly premium (e.g., ₹50/week)
-↓
-Pays via UPI / PhonePe → Coverage starts immediately
+Open GigShield on phone (no app download needed — it's a PWA)
+→ Sign up with mobile number
+→ Verify with OTP
+→ Enter your zone, platform (Zomato/Swiggy), average daily earnings
+→ AI calculates your personalized weekly premium instantly
+→ Pay via UPI to activate coverage
+→ Done. You are protected.
 ```
 
-### Step 2: Coverage is Running (Worker Does Nothing)
-
+### 2️⃣ Passive Monitoring — Worker Does Nothing
 ```
-GigShield monitors weather, AQI, and local alerts for worker's zone every 30 minutes
-↓
-Worker just goes about their day normally
-↓
-No app interaction needed during the week
-```
-
-### Step 3: Disruption Detected → Automatic Payout
-
-```
-Weather API detects: Rainfall > 35mm/hr in Kukatpally zone (Ravi's area)
-↓
-Parametric Engine confirms: This crosses our trigger threshold ✅
-↓
-Fraud Engine checks:
-   - Was Ravi in his zone? (GPS check) ✅
-   - Did Ravi make deliveries during this window? (if yes → claim paused) ✅
-   - Is this claim pattern suspicious? ✅
-↓
-Claim APPROVED automatically — no human needed
-↓
-Payout calculated: Disruption hours × Ravi's hourly rate × coverage factor = ₹250
-↓
-₹250 sent to Ravi's UPI within 60 minutes
-↓
-Ravi gets WhatsApp message: "₹250 credited to your account. Stay safe today 🙏"
+System runs quietly in the background
+→ Watches weather data for your zone every 30 minutes
+→ Monitors AQI levels every 2 hours
+→ Tracks news and traffic for social disruptions
+→ You just go about your day normally
 ```
 
-### Step 4: Weekly Renewal (One Tap)
-
+### 3️⃣ Disruption Detected — Automatic
 ```
-Every Sunday evening → Renewal reminder on WhatsApp + SMS
-↓
-Worker taps "Renew" → One-tap UPI payment
-↓
-Premium may adjust slightly based on next week's weather risk forecast for their zone
-↓
-Coverage continues seamlessly
+Example: Rainfall crosses 35mm/hr in worker's zone
+→ System detects it via OpenWeatherMap API
+→ Claim process starts immediately
+→ Worker receives a notification: "Disruption detected in your zone"
+```
+
+### 4️⃣ Fraud Check — Fully Automated
+```
+System silently verifies:
+→ Was the worker in the affected zone? (GPS check)
+→ Was delivery activity zero during that window? (activity check)
+→ Does behavior match the disruption pattern? (ML check)
+All checks happen in seconds. No human involved.
+```
+
+### 5️⃣ Instant Payout — Money in 60 Minutes
+```
+Risk score calculated
+→ Claim approved automatically
+→ Money sent directly to worker's UPI
+→ Notification: "₹250 credited to your account. Stay safe 🙏"
+```
+
+### 6️⃣ Weekly Renewal — One Tap
+```
+Every Sunday evening
+→ Renewal reminder via SMS / WhatsApp
+→ Premium updated based on next week's risk forecast
+→ Worker renews with one tap via UPI AutoPay
 ```
 
 ---
 
-## 💰 Weekly Premium Model — Keeping It Simple
+## ⚡ Disruption Triggers
 
-We price weekly because **gig workers earn weekly and think weekly**. A monthly premium of ₹200 feels like a big commitment to someone who isn't sure what next week holds. A weekly premium of ₹50 is a cup of chai per day — and that mindset shift matters.
+We use **parametric triggers** — objective, third-party verified data — so no human judgment is ever needed to approve a claim.
 
-### The Three Plans
+| Trigger | Threshold Condition | Data Source | Payout |
+|---|---|---|---|
+| 🌧️ Heavy Rain | Rainfall > 35 mm/hr | OpenWeatherMap API | 100% |
+| 🌡️ Extreme Heat | Temperature > 44°C | OpenWeatherMap API | 75% |
+| 🌫️ Severe Pollution | AQI > 300 (Hazardous) | CPCB AQI API | 75% |
+| 🚫 Curfew / Strike | Verified advisory issued | News API + Traffic data | 100% |
+| ⚙️ Platform Outage | App down > 2 hours | Platform Status Mock | 60% |
 
-| Plan | Weekly Premium | Payout Per Disruption Day | Max Payout Per Week | Best For |
-|---|---|---|---|---|
-| 🥉 Basic Shield | ₹25 | ₹150 | ₹450 | Part-time workers, beginners |
-| 🥈 Standard Shield | ₹40 | ₹250 | ₹750 | Most full-time delivery partners |
-| 🥇 Full Shield | ₹60 | ₹400 | ₹1,200 | High earners, peak season coverage |
-
-### How AI Personalises Your Premium
-
-The base price of each plan is adjusted by our AI based on factors specific to the worker:
-
-| Factor | Effect on Premium | Example |
-|---|---|---|
-| Zone's historical flood/rain risk | +₹5 to +₹15 | Kukatpally (flood-prone) = +₹10 |
-| Monsoon / peak disruption season | +₹5 | June–September = +₹5 |
-| Worker's tenure on platform | Discount -₹3 to -₹5 | 2+ years on Swiggy = -₹5 |
-| Zone's disruption frequency last 3 months | +₹3 to +₹8 | High-disruption zone = +₹6 |
-| Worker's claim history (valid claims) | No penalty | Valid claims don't raise your premium |
-
-**A Real Example:**
-```
-Base Premium (Standard Shield):           ₹40
-+ Zone Risk (Kukatpally, flood-prone):   +₹10
-+ Monsoon Season Modifier (July):        + ₹5
-- Tenure Discount (Ravi, 2 yrs Swiggy): - ₹5
-────────────────────────────────────────────
-Ravi's Personalised Weekly Premium:       ₹50
-```
-
----
-
-## ⚡ What Triggers a Payout — Our 5 Disruption Triggers
-
-A "trigger" is simply the event that causes GigShield to automatically start a payout. We use verified, third-party data so the system is objective and fraud-resistant.
-
-| # | Trigger | What We Check | Threshold | Data Source | Payout % of Daily Coverage |
-|---|---|---|---|---|---|
-| 1 | **Heavy Rain** | Rainfall intensity | > 35 mm/hr | OpenWeatherMap API | 100% |
-| 2 | **Flooding / Disaster Alert** | Government flood advisory | Official IMD / NDMA alert | IMD Public API | 100% |
-| 3 | **Extreme Heat** | Peak temperature | > 44°C between 11am–4pm | OpenWeatherMap API | 75% |
-| 4 | **Hazardous Air Quality** | AQI Index reading | AQI > 300 (Hazardous level) | CPCB AQI API | 75% |
-| 5 | **Curfew / City Shutdown** | Government order or Bandh | Section 144 or shutdown declared | News API / verified alert | 100% |
-| 6 | **Platform Outage** *(Bonus)* | Zomato/Swiggy app downtime | > 2 continuous hours | Platform Status Mock | 60% |
-
-### What Is NOT Covered — Ever
-
-These are hard exclusions built into the system at the code level, not just policy words:
-
+**What is strictly NOT covered:**
 - ❌ Vehicle breakdown or repair
-- ❌ Health issues, illness, or accidents
-- ❌ Personal decision not to work
-- ❌ Bad phone or internet connection
-- ❌ Scheduled public holidays (known in advance)
+- ❌ Health issues or accidents
+- ❌ Personal choice not to work
+- ❌ Planned events or holidays
 
 ---
 
-## 🤖 How AI Powers Every Decision
+## 🧠 Fraud Detection — Multi-Layer System
 
-GigShield isn't just calling a weather API and sending money. AI is embedded in every critical decision the platform makes. Here's how, explained simply:
-
-### 1. Smart Premium Calculation
-**What it does:** Figures out the right weekly price for each worker based on their specific zone and situation — not a one-size-fits-all number.
-
-**How it works technically:** We use a machine learning model called **XGBoost** (a type of smart calculator that learns patterns from historical data). It's trained on 3 years of weather data, historical disruption events, and zone-level risk information.
-
-**Simple analogy:** Like how your car insurance is cheaper if you live in a safe neighbourhood — GigShield charges less if your zone historically has fewer disruptions.
+We do **not** rely on screenshots or manual proof.
+Everything is data-driven and automated across 7 layers.
 
 ---
 
-### 2. Fraud Detection
-**What it does:** Catches people trying to fake claims or game the system.
+### 🛡️ Layer 1 — Disruption Validation
+> *Is the event even real?*
 
-**How it works technically:** We use a model called **Isolation Forest** — it learns what "normal" claim patterns look like, and automatically flags anything that looks unusual.
-
-**Simple analogy:** Like a bank flagging an unusual transaction in a foreign country — our system flags claims that don't fit the expected pattern.
-
----
-
-### 3. Predicting Next Week's Risk
-**What it does:** Predicts how risky the coming week is likely to be, so we can warn workers in advance and adjust premiums proactively.
-
-**How it works technically:** An **LSTM model** (a type of AI that's good at understanding sequences over time, like weather patterns) processes forecast data to predict disruption probability for each zone.
-
-**Simple analogy:** Like a weather app showing you a 7-day forecast — except ours tells workers "next week looks risky, consider upgrading your coverage."
+- Cross-check weather APIs and news sources
+- Confirm disruption actually occurred in claimed zone and time
+- If event is not verified by external data → claim rejected immediately
 
 ---
 
-### 4. Fair Payout Calculation
-**What it does:** Figures out exactly how much to pay — enough to replace lost income, but not more.
+### 📍 Layer 2 — Location and Time Validation
+> *Was the worker actually there?*
 
-**How it works technically:** A simple **linear regression model** takes the worker's average earnings, the duration of the disruption, and the severity level to calculate a fair payout.
-
-**Simple analogy:** Like how a salary continuation policy replaces your pay proportionally to how many days you missed.
-
----
-
-## 🕵️ How We Catch Fraud — 3 Layer Protection
-
-Since money is being sent automatically, fraud prevention is our most important feature. We have three independent layers:
-
-### Layer 1 — Before Coverage Starts (Onboarding)
-- Verify the worker's platform ID is real (OCR scan of Swiggy/Zomato earnings screenshot)
-- One mobile number = one account (OTP-linked, no duplicates)
-- Bank account / UPI must be verified before any payout can happen
-
-### Layer 2 — At the Moment of Claim
-- **Location check:** Worker's last known GPS location must be within their registered delivery zone
-- **Activity check:** If the worker actually made deliveries during the "disruption window," the claim is automatically paused and flagged
-- **Duplicate check:** Same worker can't claim two overlapping disruptions simultaneously
-
-### Layer 3 — After the Claim (AI Review)
-- Our Isolation Forest model checks if this claim's pattern is statistically normal
-- Mass fraud detection: If 200 workers from the same small pincode all claim the same hour — we verify against official weather data. If the rain was real, all 200 are paid. If not, all 200 are flagged.
-- Workers with 3 or more suspicious patterns in 90 days are moved to manual review — they don't lose coverage, just that specific claim is human-reviewed
+- Was the worker's GPS in the affected zone during the disruption window?
+- Workers claiming from a different city or area are flagged instantly
 
 ---
 
-## 🛠️ How We Built the Magic — Tech Stack
+### 📊 Layer 3 — Activity Validation
+> *Were they actually not working?*
 
-We chose technologies that are **production-grade but free/open-source**, so GigShield can scale without massive infrastructure cost.
+- Check delivery activity during the disruption window using simulated platform data
+- `Deliveries > 0 during disruption → Reject ❌`
+- `No delivery activity → Continue ✅`
+- This is the core validation layer
 
-### What the Worker Sees (Frontend)
-| Part | Technology | Why We Chose It |
+---
+
+### 📍 Layer 4 — GPS and Mobility Analysis
+> *Does their movement pattern make sense?*
+
+- Analyze movement patterns during disruption window
+- Normal delivery behavior = stop-start movement across multiple locations
+- Stationary or unusual patterns cross-checked against claimed disruption
+- Detects GPS spoofing attempts
+
+---
+
+### 🤖 Layer 5 — Behavioral AI
+> *Is this person's overall claim pattern suspicious?*
+
+- Uses **Isolation Forest** machine learning model
+- Tracks claim frequency, timing patterns, edge-case behavior
+- Flags workers who claim at statistically unusual rates compared to their zone peers
+
+---
+
+### 🌐 Layer 6 — Crowd Validation
+> *Are multiple workers in the same zone affected?*
+
+- If many workers in the same pincode are all affected simultaneously → strong signal that disruption is real (valid for bandhs, curfews, floods)
+- If only one isolated worker claims while neighbors don't → flagged for review
+
+---
+
+### 📄 Layer 7 — Optional Proof (Edge Cases Only)
+> *Last resort — never mandatory*
+
+- Triggered only when system confidence score is in the uncertain range
+- Worker may be asked for a supporting screenshot
+- This is never the default — only a fallback for truly ambiguous cases
+
+---
+
+## 🧮 Risk Scoring Engine
+
+Every claim goes through a scoring system built from all 7 layers:
+
+```
+Risk Score =
+  Trigger Confidence     (Is the event verified?)
++ Location Match         (Was worker in zone?)
++ Activity Check         (Were they not working?)
++ GPS Behavior           (Does movement make sense?)
++ Behavioral Pattern     (Is claim history clean?)
++ Crowd Validation       (Are others affected too?)
+```
+
+**Decision Logic:**
+
+| Score Range | Action |
+|---|---|
+| 0 – 30 | ✅ Auto Approve — payout sent immediately |
+| 30 – 60 | ⚠️ Review — optional proof may be requested |
+| 60+ | ❌ Reject — claim denied with reason |
+
+---
+
+## 💰 Weekly Premium Model
+
+Designed around how gig workers actually earn — **week to week**.
+
+A monthly premium of ₹200 feels like a big commitment.
+The same ₹200 split into ₹50 per week feels completely manageable.
+Same cost. Much better fit for the worker's life.
+
+### Plans
+
+| Plan | Weekly Premium | Daily Payout on Claim |
 |---|---|---|
-| Web App + PWA | React.js | Fast, works offline, installable without app store |
-| Design System | Tailwind CSS + shadcn/ui | Clean, professional UI out of the box |
-| Multiple Languages | i18next | Telugu, Hindi, English support with one setup |
-| App State | Zustand | Lightweight, easy to manage |
+| 🥉 Basic | ₹25 | ₹150/day |
+| 🥈 Standard | ₹40 | ₹250/day |
+| 🥇 Premium | ₹60 | ₹400/day |
 
-### The Engine Room (Backend)
-| Part | Technology | Why We Chose It |
+### AI Personalization
+Your premium is not a flat rate — it adjusts based on:
+
+- **Zone risk** — is your area historically flood-prone or heat-affected?
+- **Weather history** — how often has your zone been disrupted in the past 3 months?
+- **Your behavior** — long-term users with clean claim history get loyalty discounts
+- **Seasonal index** — premiums adjust slightly during monsoon vs. winter
+
+**Example:**
+```
+Base Premium (Standard): ₹40
++ Zone Risk (Kukatpally, flood-prone): +₹8
++ Monsoon Season Modifier: +₹5
+- Tenure Discount (1.5 years active): -₹3
+─────────────────────────────────
+Final Weekly Premium: ₹50
+```
+
+---
+
+## 🤖 AI and ML Integration
+
+AI is not a feature we added on top — it is the foundation of how GigShield works.
+
+| What | Algorithm | Purpose |
 |---|---|---|
-| API Server | Node.js + Express.js | Fast, handles many simultaneous requests |
-| Main Database | PostgreSQL | Reliable, handles financial data safely |
-| Fast Cache | Redis | Stores weather alerts and session data instantly |
-| Login / OTP | Firebase Auth | Battle-tested phone number OTP, free tier |
-| Background Jobs | BullMQ | Runs trigger monitoring every 30 mins automatically |
+| Premium Calculation | XGBoost (Gradient Boosting) | Predict weekly risk score per worker per zone |
+| Fraud Detection | Isolation Forest | Detect anomalous claim behavior |
+| Disruption Forecasting | LSTM (Time Series) | Predict likely disruptions 3–5 days ahead |
+| Payout Calculation | Linear Regression | Estimate fair income replacement amount |
 
-### The Brain (AI/ML)
-| Part | Technology | Why We Chose It |
-|---|---|---|
-| ML Models | Python + XGBoost + scikit-learn | Industry-standard for structured data |
-| Time Series | TensorFlow Lite (LSTM) | Lightweight weather prediction model |
-| Model API | FastAPI (Python) | Serves ML predictions to the main backend fast |
+> All models start rule-based in Phase 1 and transition to trained ML models in Phase 3 as data grows.
 
-### The Connections (Integrations)
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+| What | Technology |
+|---|---|
+| Web App | React.js |
+| Offline Support | PWA with Service Workers |
+| Styling | Tailwind CSS |
+| State Management | Zustand |
+
+### Backend
+| What | Technology |
+|---|---|
+| API Server | Node.js + Express.js |
+| Database | PostgreSQL |
+| Caching + Sessions | Redis |
+| Background Jobs | BullMQ |
+
+### AI Layer
+| What | Technology |
+|---|---|
+| ML Framework | Python + scikit-learn |
+| Pricing Model | XGBoost |
+| Fraud Detection | Isolation Forest |
+| Forecasting | LSTM (TensorFlow Lite) |
+| Model Serving | FastAPI microservice |
+
+### Integrations
 | Service | Provider | Mode |
 |---|---|---|
-| Weather Data | OpenWeatherMap (free tier) | Live |
-| Air Quality (AQI) | CPCB AQI API | Live + Mock fallback |
-| Payments | Razorpay (test mode) | Sandbox |
-| News / Shutdown Alerts | NewsData.io | Mock |
-| Platform Activity (Zomato/Swiggy) | Simulated JSON | Mock |
-| Maps | Leaflet.js + OpenStreetMap | Live (free) |
-
-### Where It Lives (Infrastructure)
-| Part | Platform |
-|---|---|
-| Frontend | Vercel (free tier) |
-| Backend + ML Service | Railway / Render (free tier) |
-| CI/CD (auto-deploy) | GitHub Actions |
-| Error Monitoring | Sentry |
+| Weather | OpenWeatherMap | Live (free tier) |
+| AQI | CPCB AQI API | Live + Mock |
+| News / Alerts | NewsData.io | Mock |
+| Payments | Razorpay | Test / Sandbox |
+| Platform Activity | Zomato / Swiggy | Simulated Mock |
 
 ---
 
-## 📱 Why a Web App and Not a Native App
-
-This was a deliberate decision, not a shortcut. Here's our thinking:
-
-**Ravi has a ₹7,000 Android phone.** It has 16GB storage, half of which is used by WhatsApp photos. He's not going to download another app unless he absolutely has to.
-
-| Reason | Explanation |
-|---|---|
-| **No download needed** | Ravi visits a URL and taps "Add to Home Screen" — it works like an app but installs in 3 seconds |
-| **Works on low-end phones** | PWAs are lighter and faster than native apps on budget devices |
-| **Offline support** | Service workers cache his dashboard — he can check coverage status even on 2G |
-| **No app store approval needed** | We can push updates instantly without waiting for Play Store review |
-| **SMS/WhatsApp as backup** | Even if he never opens the app, critical alerts (payouts, renewals) reach him via SMS |
-
----
-
-## 🏗️ System Architecture — How Everything Connects
+## 🏗️ System Architecture
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                      GIGSHIELD PLATFORM
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
- ┌──────────────┐   ┌──────────────────┐   ┌────────────────┐
- │  WORKER PWA  │   │ ADMIN DASHBOARD  │   │ INSURER PORTAL │
- │  (React PWA) │   │ (Analytics View) │   │ (Risk & Loss)  │
- └──────┬───────┘   └────────┬─────────┘   └───────┬────────┘
-        │                    │                      │
-        └────────────────────┼──────────────────────┘
-                             ▼
-               ┌─────────────────────────┐
-               │    API GATEWAY          │
-               │    (Express.js)         │
-               └──────────┬──────────────┘
-                          │
-        ┌─────────────────┼──────────────────┐
-        ▼                 ▼                  ▼
-┌──────────────┐  ┌──────────────┐  ┌──────────────────────┐
-│ AUTH SERVICE │  │POLICY SERVICE│  │   CLAIMS ENGINE       │
-│ (Firebase    │  │(Premium Calc │  │ (Trigger Monitor +    │
-│  OTP Login)  │  │ via ML)      │  │  Auto Payout Logic)   │
-└──────────────┘  └──────┬───────┘  └──────────┬───────────┘
-                         │                      │
-                         ▼                      ▼
-               ┌──────────────────┐   ┌─────────────────────┐
-               │  ML MICROSERVICE │   │  EXTERNAL APIs       │
-               │  (FastAPI Python)│   │  ┌─────────────────┐ │
-               │  - XGBoost       │   │  │ OpenWeatherMap  │ │
-               │  - IsolationForst│   │  │ CPCB AQI        │ │
-               │  - LSTM Forecast │   │  │ Razorpay        │ │
-               └──────────────────┘   │  │ NewsData.io     │ │
-                                       │  │ Platform Mocks  │ │
-               ┌──────────────────┐   └─────────────────────┘
-               │  DATABASE LAYER  │
-               │  PostgreSQL      │
-               │  + Redis Cache   │
-               └──────────────────┘
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-             TRIGGER MONITORING LOOP (Every 30 mins)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  BullMQ Job → Fetch Weather/AQI for all active zones
-      ↓
-  Check against trigger thresholds
-      ↓
-  If threshold crossed → Run Fraud Engine → If clean → Payout
-      ↓
-  Log event → Update Dashboard → Notify Worker via SMS/WhatsApp
+┌─────────────────────────────────────────────────┐
+│           Worker PWA  |  Admin Dashboard         │
+│              (React.js + Tailwind)               │
+└─────────────────────┬───────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────┐
+│              Backend API (Node.js)               │
+│   Auth  |  Policy Service  |  Claims Service     │
+└──────┬──────────────┬──────────────┬────────────┘
+       │              │              │
+       ▼              ▼              ▼
+┌────────────┐  ┌──────────────┐  ┌─────────────────────┐
+│ PostgreSQL │  │ ML Service   │  │ External APIs        │
+│ + Redis    │  │ (FastAPI /   │  │ OpenWeatherMap       │
+│            │  │  Python)     │  │ CPCB AQI             │
+└────────────┘  └──────────────┘  │ NewsData (mock)      │
+                                   │ Razorpay (sandbox)   │
+                                   └─────────────────────┘
 ```
 
 ---
 
-## 📅 6-Week Build Plan
+## 📊 Dashboard
 
-### Phase 1 — Ideation & Foundation (March 4–20)
-**Goal: Know exactly what we're building and why**
+### Worker View
+What the delivery partner sees in their app:
 
-- [ ] Finalise persona, city, triggers and premium model
-- [ ] Write complete README strategy document
-- [ ] Design wireframes for Worker Onboarding + Dashboard (Figma)
-- [ ] Set up GitHub repository with project folder structure
-- [ ] Set up basic React frontend and Node.js backend scaffolding
+```
+🛡️ Your GigShield Coverage
+─────────────────────────────────────
+Status          : ACTIVE ✅
+This Week       : March 10 – 16
+Plan            : Standard (₹50/week)
+─────────────────────────────────────
+💰 Income Protected This Week : ₹750
+📦 Payouts Received           : ₹250
+🌧️ Disruption Days            : 1
+🔄 Next Renewal               : Sunday
+─────────────────────────────────────
+```
+
+### Admin / Insurer View
+What the insurer sees in their dashboard:
+
+- 📍 **Zone Heatmap** — live map showing active disruption zones
+- 📉 **Loss Ratio** — claims paid vs premiums collected per city
+- 🚨 **Fraud Alerts** — workers flagged for review
+- 📈 **Predictive Claims Forecast** — expected payouts for next 7 days
+- 📊 **Claim Analytics** — breakdown by trigger type, zone, and time
+
+---
+
+## 🚀 Why This Works
+
+- ✅ No dependency on real platform APIs — mocks are sufficient for full demo
+- ✅ Fully automated parametric system — zero manual intervention in claim flow
+- ✅ Multi-layer fraud detection — not relying on a single check
+- ✅ PWA means no app store, no installation, works on cheap Android phones
+- ✅ Weekly pricing model fits naturally into how gig workers think about money
+- ✅ Scalable across cities with no change to core system
+
+---
+
+## 💼 Business Viability
+
+| Metric | Value |
+|---|---|
+| Average Weekly Premium | ₹45 |
+| Expected Payout per Worker per Week | ₹18 |
+| Operating Cost per Worker per Week | ₹5 |
+| **Net Margin per Worker per Week** | **~₹22 (49%)** |
+
+**Scale Potential:**
+- India has ~5 million food delivery workers
+- At just 1% penetration = 50,000 workers
+- Weekly revenue = ₹22.5 lakh
+- Fully digital distribution = near-zero agent cost
+
+> 👉 Sustainable. Scalable. And solves a real problem for real people.
+
+---
+
+## 📅 Deliverables Roadmap
+
+### Phase 1 — Ideation and Foundation (March 4 – 20)
+**Theme: Know Your Delivery Worker**
+
+- [ ] Finalize persona and disruption triggers
+- [ ] Design weekly premium logic
+- [ ] Create README with full project strategy
+- [ ] Set up GitHub repository
+- [ ] Build wireframes for onboarding and dashboard
 - [ ] Record 2-minute strategy video
 
-**Deliverable:** README + repo link + 2-min video
-
 ---
 
-### Phase 2 — Build the Core (March 21 – April 4)
-**Goal: A working platform end-to-end**
+### Phase 2 — Automation and Protection (March 21 – April 4)
+**Theme: Protect Your Worker**
 
-- [ ] Build Worker Registration and Onboarding screens
-- [ ] Build Insurance Policy Creation and management
+- [ ] Build worker registration and onboarding UI
+- [ ] Implement insurance policy creation flow
 - [ ] Integrate OpenWeatherMap and AQI APIs
-- [ ] Build Dynamic Premium Calculator (rule-based first, then ML)
-- [ ] Implement all 5 parametric triggers with threshold checks
-- [ ] Build Claims Management module (auto-trigger + Razorpay sandbox payout)
-- [ ] Build basic Worker Dashboard (coverage status, payout history)
+- [ ] Build dynamic premium calculator
+- [ ] Implement 5 automated parametric triggers
+- [ ] Build claims management with auto-trigger and payout simulation
+- [ ] Integrate Razorpay test mode
 - [ ] Record 2-minute demo video
 
-**Deliverable:** Working prototype + 2-min demo video
-
 ---
 
-### Phase 3 — Make It Smart and Complete (April 5–17)
-**Goal: Production-ready, polished, and impressive**
+### Phase 3 — Scale and Optimise (April 5 – 17)
+**Theme: Perfect for Your Worker**
 
 - [ ] Deploy ML fraud detection (Isolation Forest)
-- [ ] Add GPS location validation for claims
-- [ ] Complete Worker Dashboard (earnings protected, active coverage, payout history)
-- [ ] Build Admin/Insurer Dashboard (loss ratios, zone heatmap, predictive claims)
-- [ ] Add Telugu and Hindi language support
-- [ ] Polish UI and mobile responsiveness
-- [ ] Record 5-minute final demo (with simulated rainstorm triggering auto-payout)
-- [ ] Prepare Final Pitch Deck (PDF)
-
-**Deliverable:** Full platform + 5-min demo video + pitch deck PDF
+- [ ] Add GPS location validation
+- [ ] Build worker dashboard (earnings, coverage, payouts)
+- [ ] Build admin dashboard (loss ratios, heatmap, predictions)
+- [ ] Add multilingual support (Telugu + Hindi)
+- [ ] Record 5-minute final demo video with simulated disruption walkthrough
+- [ ] Prepare and submit final pitch deck (PDF)
 
 ---
 
-## 📊 The Dashboard — What Workers and Insurers See
+## 🧠 Key Insight
 
-### Worker Dashboard
-```
-┌───────────────────────────────────────────┐
-│  🛡️ GigShield — Your Coverage            │
-│  Week: March 10–16, 2026  |  ACTIVE ✅    │
-├───────────────────────────────────────────┤
-│  💰 Income Protected This Week:  ₹750    │
-│  📦 Payouts Received:  ₹250 (Mon rain)   │
-│  🌧️  Disruption Events This Week:  1     │
-│  🔄 Next Renewal:  Sunday                │
-│  📋 Current Plan:  Standard (₹50/week)  │
-├───────────────────────────────────────────┤
-│  📍 Your Zone:  Kukatpally, Hyderabad    │
-│  🌡️  Today's Risk Level:  LOW ✅         │
-│  🌧️  Rain Forecast This Week:  Wed, Thu  │
-└───────────────────────────────────────────┘
-```
+> **We don't verify claims — we verify conditions.**
 
-### Admin / Insurer Dashboard (Key Metrics)
-- **Loss Ratio** per city and zone — how much is paid out vs collected
-- **Active Policies** count — how many workers are currently covered
-- **Disruption Heatmap** — live map of zones with active weather alerts
-- **Fraud Queue** — workers flagged for manual claim review
-- **Predictive Claim Forecast** — how many claims to expect next 7 days based on weather forecast
-- **Top Triggers This Month** — rain vs. heat vs. AQI vs. curfew breakdown
-
----
-
-## 🔌 API Integrations
-
-### 1. OpenWeatherMap (Free Tier — Live)
-```
-What it gives us:  Real-time rainfall, temperature, weather condition codes
-How we call it:    Every 30 minutes for all active delivery zones
-Trigger check:     Rainfall > 35mm/hr OR Temperature > 44°C
-Fallback:          Mock JSON response if rate limit hit
-```
-
-### 2. CPCB AQI API (Live + Mock Fallback)
-```
-What it gives us:  Air Quality Index readings by city station
-How we call it:    Every 2 hours
-Trigger check:     AQI > 300 (Hazardous category)
-Fallback:          Static mock data for demo purposes
-```
-
-### 3. Razorpay (Test / Sandbox Mode)
-```
-What it gives us:  Simulated UPI payout to worker
-Mode:              Sandbox — no real money, identical to production flow
-Shows:             Transaction ID, timestamp, amount, UPI reference
-```
-
-### 4. Platform Activity Mock (Simulated Zomato/Swiggy)
-```
-What it gives us:  Worker's delivery activity log (timestamps, completions)
-Purpose:           Used by Fraud Layer 2 to check if worker was active during claim
-Format:            Mock JSON: { worker_id, deliveries: [{ time, status }] }
-```
-
-### 5. NewsData.io (Mock for Curfew/Bandh Alerts)
-```
-What it gives us:  News alerts about local curfews or city shutdowns
-Mode:              Mock alert injection for demo — simulates a real shutdown trigger
-```
-
----
-
-## 💼 Can This Be a Real Business?
-
-Yes. Here's why the numbers work:
-
-### Unit Economics Per Worker Per Week
-
-| Item | Amount |
-|---|---|
-| Average Weekly Premium Collected | ₹45 |
-| Expected Payout Per Worker Per Week | ₹18 (targeting 40% loss ratio) |
-| Operational Cost Per Worker Per Week | ₹5 |
-| **Net Per Worker Per Week** | **₹22 (~49% margin)** |
-
-### Growth Path
-
-| Stage | Workers | Weekly Revenue | Model |
-|---|---|---|---|
-| Pilot (City 1 — Hyderabad) | 1,000 | ₹45,000 | Direct to workers |
-| Scale (5 cities) | 50,000 | ₹22.5 lakh | Direct + Platform partnership |
-| National | 5,00,000 | ₹2.25 crore | Embedded in Zomato/Swiggy app as welfare feature |
-
-### Why the Loss Ratio Stays Healthy
-- Severe disruptions (rain > 35mm/hr, AQI > 300) happen **4–6 days per month** on average — not every day
-- Many workers will be active on mildly rainy days (below trigger threshold) — they pay premium but don't claim
-- Parametric triggers mean no inflated or fraudulent claims slip through
-
-### The Big Partnership Opportunity
-Zomato and Swiggy have been under regulatory pressure to provide better welfare for gig workers. GigShield can be **white-labelled and embedded** into their platforms as a welfare feature — with the platform subsidising part of the premium. This is the B2B2C path to scale.
-
----
-
-## 📖 Glossary — No Jargon Left Behind
-
-| Term | What It Actually Means |
-|---|---|
-| **Parametric Insurance** | Insurance where a pre-agreed event (like heavy rain) automatically triggers a payout — no claim form needed |
-| **Trigger** | The specific event or threshold that causes a payout to start automatically (e.g., rainfall > 35mm/hr) |
-| **Premium** | The amount a worker pays to stay insured — like a weekly subscription fee for protection |
-| **Payout** | The money the worker receives when a trigger event happens |
-| **Loss Ratio** | The % of collected premiums paid out as claims. 40% means for every ₹100 collected, ₹40 is paid out |
-| **AQI** | Air Quality Index — a number from 0–500 measuring air pollution. Above 300 is "Hazardous" |
-| **Fraud Detection** | The system that checks whether a payout request is genuine or being faked |
-| **PWA (Progressive Web App)** | A website that behaves like a mobile app — can be added to home screen, works offline, sends notifications |
-| **XGBoost** | A popular ML algorithm great at making predictions from structured data like weather + location history |
-| **Isolation Forest** | An ML algorithm that finds unusual patterns — used here to detect suspicious claim behaviour |
-| **LSTM** | A type of AI model good at understanding time-based patterns — used here for weather forecasting |
-| **UPI** | Unified Payments Interface — India's real-time payment system (PhonePe, GPay, Paytm) |
-| **Sandbox / Test Mode** | A safe testing environment for payments where no real money moves but everything works like production |
-| **Loss of Income (LOI)** | The money a worker fails to earn because of an external disruption — the only thing GigShield covers |
-| **B2B2C** | Business to Business to Consumer — selling to Zomato/Swiggy (businesses) who then offer it to their workers (consumers) |
+This is what makes GigShield fundamentally different.
+We never ask the worker to prove they didn't work.
+We verify the world they were working in.
+If conditions made work impossible — they get paid. Simple.
 
 ---
 
 ## 👥 Team
 
-Neeraj kumar, Gnanadeep venkat, Venkata Hemanth, M Nikhil, M pravallika
+| Name |
+|---|
+| Neeraj Kumar | 
+| Gnanadeep Venkat |
+| Venkata Hemanth |
+| M Nikhil | 
+| M Pravallika |
 
-**University:** SRM UNIVERSITY AP
-**GitHub Repository:** [Link — same repo used across all 3 phases]
-**Phase 1 Demo Video:** [YouTube / Google Drive link]
+**University:** SRM University AP
+**GitHub Repository:** *(link to be added)*
+**Phase 1 Demo Video:** *(link to be added)*
 
 ---
 
-> *"A delivery partner's income shouldn't vanish just because the sky opened up."*
->
-> Built with purpose by  Cortex Builders | Guidewire DEVTrails 2026 🛡️
+## 🛡️ Final Thought
+
+> *A delivery partner's income shouldn't disappear just because the weather changes.*
+
+GigShield doesn't just sell insurance.
+It gives a delivery partner the confidence to say —
+**"Even if it rains tomorrow, my family will be okay."**
+
+---
+
+*Built with ❤️ by Team GigShield | SRM University AP | Guidewire DEVTrails 2026*
