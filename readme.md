@@ -11,7 +11,7 @@
 1. [The Problem](#-the-problem)
 2. [The Reality in Numbers](#-the-reality-in-numbers)
 3. [The Big Idea](#-the-big-idea)
-4. [Why GigSure is Different](#-why-gigshield-is-different)
+4. [Why GigSure is Different](#-why-gigsure-is-different)
 5. [Who This is For](#-who-this-is-for)
 6. [How It Works](#-how-it-works)
 7. [Disruption Triggers](#-disruption-triggers)
