@@ -11,7 +11,7 @@
 1. [The Problem](#-the-problem)
 2. [The Reality in Numbers](#-the-reality-in-numbers)
 3. [The Big Idea](#-the-big-idea)
-4. [Why GigSure is Different](#-why-GigSure-is-different)
+4. [Why GigSure is Different](#-why-gigshield-is-different)
 5. [Who This is For](#-who-this-is-for)
 6. [How It Works](#-how-it-works)
 7. [Disruption Triggers](#-disruption-triggers)
@@ -623,8 +623,25 @@ Syndicate pattern    → FAILS ❌ (500 people following same Telegram
 
 **The honest answer:**
 A single perfectly patient fraudster might pass our system in week 1.
-But they gain only ₹350 maximum for 7 days of constant manual effort.
-The effort-to-reward ratio makes individual fraud not worth attempting.
+But the effort vs reward makes it pointless:
+
+```
+What the fraudster must do every single day for 7 days:
+→ Keep fake GPS running all day manually
+→ Move fake location every 10–15 minutes
+→ Simulate stop-start delivery pattern
+→ Maintain realistic speeds throughout
+→ Stay on mobile data, not WiFi
+→ Do this for 8–10 hours daily, all week
+
+Maximum possible gain: ₹400 payout
+Weekly premium already paid: ₹50
+Net gain after all that effort: ₹350
+
+For 7 days of constant manual work → ₹350
+That is less than one hour of actual delivery work.
+No rational person attempts this.
+```
 
 At syndicate scale — 500 people cannot all fake 7 different realistic delivery routes, maintain different timing patterns, and produce zero order history simultaneously without our crowd analysis detecting the statistical impossibility.
 
@@ -891,6 +908,8 @@ AI is not a feature we added on top — it is the foundation of how GigSure work
 | News / Alerts | NewsData.io | Mock |
 | Payments | Razorpay | Test / Sandbox |
 | Platform Activity | Zomato / Swiggy | Simulated Mock |
+| Location Capture | JS Geolocation API | Built-in (free) |
+| IP / Network Check | ipapi.co | Free tier |
 
 ---
 
@@ -1034,17 +1053,17 @@ If conditions made work impossible — they get paid. Simple.
 
 ## 👥 Team
 
-| Name | 
+| Name |
 |---|
-| Neeraj Kumar | 
+| Neeraj Kumar |
 | Gnanadeep Venkat |
 | Venkata Hemanth |
 | M Nikhil |
-| M Pravallika | 
+| M Pravallika |
 
 **University:** SRM University AP
-**GitHub Repository:** *https://github.com/uvhemanth6/GigSure_Guidewire*
-**Phase 1 Demo Video:** *https://drive.google.com/file/d/1hcmnCD2SZFaCKOSlPEKu321WfvcF1b8d/view?usp=sharing*
+**GitHub Repository:** https://github.com/uvhemanth6/GigSure_Guidewire
+**Phase 1 Demo Video:** https://drive.google.com/file/d/1hcmnCD2SZFaCKOSlPEKu321WfvcF1b8d/view?usp=sharing
 
 ---
 
