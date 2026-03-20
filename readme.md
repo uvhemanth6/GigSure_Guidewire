@@ -1034,8 +1034,8 @@ If conditions made work impossible — they get paid. Simple.
 
 ## 👥 Team
 
-| Name | Role |
-|---|---|
+| Name | 
+|---|
 | Neeraj Kumar | 
 | Gnanadeep Venkat |
 | Venkata Hemanth |
