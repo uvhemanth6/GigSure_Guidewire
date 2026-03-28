@@ -11,7 +11,7 @@
 1. [The Problem](#-the-problem)
 2. [The Reality in Numbers](#-the-reality-in-numbers)
 3. [The Big Idea](#-the-big-idea)
-4. [Why GigSure is Different](#-why-gigshield-is-different)
+4. [Why GigSure is Different](#-why-gigsure-is-different)
 5. [Who This is For](#-who-this-is-for)
 6. [How It Works](#-how-it-works)
 7. [Disruption Triggers](#-disruption-triggers)
@@ -912,6 +912,23 @@ AI is not a feature we added on top — it is the foundation of how GigSure work
 | IP / Network Check | ipapi.co | Free tier |
 
 ---
+## 📱 Platform Choice — Why PWA over Native App
+
+We chose a Progressive Web App (PWA) over a native Android app 
+for three reasons specific to our persona:
+
+1. Ravi has a ₹7,000 Android phone with 16GB storage — 
+   half used by WhatsApp. He will not download another app.
+   A PWA installs in 3 seconds via "Add to Home Screen."
+
+2. PWAs work offline — service workers cache the dashboard 
+   so Ravi can check his coverage status even without network,
+   which is important because heavy rain degrades mobile signal.
+
+3. We can push updates instantly without Play Store review cycles —
+   critical for a live insurance product where trigger thresholds 
+   may need rapid adjustment during an active weather event.
+
 
 ## 🏗️ System Architecture
 
@@ -1042,7 +1059,11 @@ What the insurer sees in their dashboard:
 
 ## 🧠 Key Insight
 
-> **We don't verify claims — we verify conditions.**
+> **We don't verify claims — we verify lives.**
+> We never ask the worker to prove they didn't work.
+> We verify the world they were working in — and the week 
+> of human behavior that led them there.
+> If conditions made work impossible — they get paid. Simple.
 
 This is what makes GigSure fundamentally different.
 We never ask the worker to prove they didn't work.
