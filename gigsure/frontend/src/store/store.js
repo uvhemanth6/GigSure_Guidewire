@@ -6,25 +6,17 @@ export const useStore = create(
     (set) => ({
       user: null,
       token: null,
-      currentPolicy: null,
       isAuthenticated: false,
 
-      login: (userData, jwtToken) => set({ 
-        user: userData, 
-        token: jwtToken, 
-        isAuthenticated: true 
-      }),
+      login: (user, token) => {
+        set({ user, token, isAuthenticated: true });
+        localStorage.setItem('token', token);
+      },
 
-      logout: () => set({ 
-        user: null, 
-        token: null, 
-        currentPolicy: null, 
-        isAuthenticated: false 
-      }),
-
-      setPolicy: (policyData) => set({ 
-        currentPolicy: policyData 
-      }),
+      logout: () => {
+        set({ user: null, token: null, isAuthenticated: false });
+        localStorage.removeItem('token');
+      },
     }),
     {
       name: 'gigsure-storage',

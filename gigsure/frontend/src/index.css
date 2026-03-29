@@ -4,21 +4,19 @@
 
 @layer base {
   body {
-    @apply bg-gray-900 text-white;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @apply bg-gray-900 text-white antialiased;
   }
 }
 
 @layer utilities {
-  .fade-in {
+  .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;
   }
 
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(10px);
     }
     to {
       opacity: 1;
@@ -26,7 +24,7 @@
     }
   }
 
-  /* Custom scrollbar */
+  /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -43,18 +41,4 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-gray-500;
   }
-}
-
-/* Animations */
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-.animate-pulse-slow {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
